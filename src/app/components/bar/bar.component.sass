@@ -1,0 +1,33 @@
+@import '../../../styles'
+
+:host
+    display: flex
+    height: $px8
+    align-items: center
+
+.drawer-btn
+    display: none
+    margin-bottom: $px1
+    margin-left: $px1
+
+.brand
+    text-decoration: none
+    color: $on-surface
+    padding: $px1 $px2 $px1
+    padding-right: $px2
+    margin-left: $px1
+    border-radius: $corner-full
+    &:hover
+        background-color: $surface-variant
+
+.search-input
+    border-radius: $corner-full
+    border: none
+    background-color: $white
+    height: $px5
+    padding: 0 $px2 0
+
+
+@media screen and (max-width: $md)
+    .drawer-btn
+        display: flex

@@ -1,0 +1,59 @@
+@import '../../../styles'
+
+:host
+    background-color: $surface-2
+    // overflow-y: auto
+    display: flex
+    
+.nav-brand
+    color: $primary
+    padding: $em4 $px2 $em4
+    text-decoration: none
+    
+.nav-item-group
+    justify-content: space-around
+    align-items: center
+
+.container
+    padding-left: $px1
+    padding-right: $px1
+    padding-bottom: $px2
+    
+@media screen and (max-width: $md)
+    .container 
+        padding-bottom: 0
+        padding-left: $px1
+        padding-right: $px1
+
+    .nav-banner
+        display: flex
+        flex-direction: row
+        align-items: centers
+        ion-icon
+            margin: $px1
+           
+    .drawer-btn
+        display: flex
+        margin-bottom: $px1
+        min-height: $px6
+
+    .nav-item-group
+        width: 300px
+        justify-content: start
+        align-items: flex-start
+        padding: 0 $px1 0
+        position: fixed
+        background-color: $surface-2
+        left: -300px
+        border-top-right-radius: $corner-large
+        border-bottom-right-radius: $corner-large
+        height: 100%
+        overflow-y: auto
+        transition: 300ms left ease-in-out
+        z-index: 1
+
+    .open
+        left: 0
+
+    .close 
+        left: -300px

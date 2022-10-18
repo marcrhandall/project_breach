@@ -1,0 +1,92 @@
+@import '../../../../styles'
+
+:host
+    display: flex
+
+.nav-link
+    border-radius: $corner-medium
+    flex-grow: 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    color: $on-surface-variant
+    align-items: center
+    height: auto
+    width: $px10
+    margin-bottom: $px2
+    text-decoration: none
+    gap: 0
+    .link-label
+        font-size: .75rem
+    ion-icon
+        border-radius: $corner-full
+        padding-left: $px2
+        padding-right: $px2
+        height: $px4
+    &:hover
+        --ionicon-stroke-width: 40px 
+        color: $on-secondary-container
+        ion-icon
+            background-color: $surface-variant
+            transition: 0.5s background-color
+    &:hover
+        background-color: transparent
+
+
+.link-label
+    height: 24px
+    display: flex
+    align-items: center 
+
+.active
+    color: $on-secondary-container
+    background-color: transparent
+    transition: 0.5s background-color
+    ion-icon
+        color: $on-secondary-container
+        background-color: $secondary-container
+        transition: 0.5s background-color
+    &:hover
+        --ionicon-stroke-width: 40px 
+        color: $on-secondary-container
+        ion-icon
+            background-color: $secondary-container
+
+@media screen and (max-width: $md)
+    .nav-link
+        border-radius: $corner-full
+        height: $px6
+        padding: 0 $px2 0
+        text-decoration: none
+        display: flex
+        flex-direction: row
+        flex-grow: 1
+        width: auto 
+        gap: $px2
+        margin-bottom: 0
+        ion-icon
+            border-radius: 0
+            padding-left: 0
+            padding-right: 0
+        &:hover
+            background-color: $surface-variant
+            transition: 0.5s background-color
+            ion-icon
+                background-color: transparent
+
+    .active
+        color: $on-secondary-container
+        background-color: $secondary-container
+        transition: 0.5s background-color
+        &:hover
+            --ionicon-stroke-width: 40px 
+            color: $on-secondary-container
+            background-color: $secondary-container
+        ion-icon
+            color: $on-secondary-container
+            background-color: transparent
+            transition: 0.5s background-color
+
+
+    :host
+        width: 100%
