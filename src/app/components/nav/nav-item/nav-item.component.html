@@ -1,11 +1,13 @@
 <a 
-  class="nav-link nav-link-compact"
+  class="nav-link nav-link-compact icon-anim"
   [routerLink]="link"
   routerLinkActive="active"
   [routerLinkActiveOptions]="{ exact: true }"
   (isActiveChange)="onActiveChange($event)"
   >
-      <ion-icon *ngIf="icon" name="{{getIcon()}}"></ion-icon>
-      <div class="link-label">{{ label }}</div>
+    <span class="material-symbols-rounded">
+      {{ icon }}
+    </span>
+    <div class="link-label">{{ label }}</div>
   </a
 >

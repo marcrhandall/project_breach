@@ -1,8 +1,11 @@
 <div class="container">
     <div class="col nav-item-group" [ngClass]="{'open': isDrawerOpen, 'close' : !isDrawerOpen}" >
-        <button class="drawer-btn" (click)="toggleDrawer()"><ion-icon name="menu-outline"></ion-icon></button>
-        <app-nav-item (click)="toggleDrawer()" label="Home" icon="home-outline" link="/"></app-nav-item>
-        <app-nav-item (click)="toggleDrawer()" label="Payroll" icon="cash-outline" link="/payroll"></app-nav-item>
-        <app-nav-item (click)="toggleDrawer()" label="Employees" icon="people-outline" link="/employees" ></app-nav-item>
+        <button class="drawer-btn icon-anim" (click)="toggleDrawer()">
+            <span class="material-symbols-rounded drawer-icon">menu</span>
+            <span class="material-symbols-rounded drawer-icon-sm">menu_open</span>
+        </button>
+        <app-nav-item (click)="toggleDrawer()" label="Home" icon="home" link="/"></app-nav-item>
+        <app-nav-item (click)="toggleDrawer()" label="Payroll" icon="request_quote" link="/payroll"></app-nav-item>
+        <app-nav-item (click)="toggleDrawer()" label="Employees" icon="badge" link="/employees" ></app-nav-item>
     </div>
 </div>

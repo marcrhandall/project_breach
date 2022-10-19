@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200..700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200..700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200')
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300..900&display=swap')
+
 
 @function tint-color($color, $weight)
   @return mix(white, $color, $weight)
@@ -196,11 +200,26 @@ $corner-large: 24px
   box-sizing: border-box
   margin: 0
   padding: 0
-  font-family: 'Poppins', sans-serif
-  font-weight: 500
-  ion-icon
-    height: 24px
-    width: 24px
+  font-family: 'Lexend Deca', sans-serif
+
+*::-webkit-scrollbar 
+  width: 0.5em
+
+ 
+*::-webkit-scrollbar-track 
+
+ 
+*::-webkit-scrollbar-thumb 
+  background-color: $secondary
+  border-radius: $corner-full
+
+
+
+.material-symbols-rounded 
+  font-family: 'Material Symbols Rounded'
+  height: $px3
+  width: $px3
+
 
 html
   font-size: 100%
@@ -251,3 +270,18 @@ html
   height: $px7
   margin: $px1
   gap: $px1
+
+.icon-anim
+    .material-symbols-rounded
+      font-variation-settings: 'wght' 400
+      transition: font-variation-settings 200ms cubic-bezier(0.2, 0, 0, 1)   
+    &:hover
+      .material-symbols-rounded
+        background-color: $surface-variant
+        font-variation-settings: 'wght' 600
+        transition: font-variation-settings 200ms cubic-bezier(0.2, 0, 0, 1)   
+    &:active
+      .material-symbols-rounded
+        background-color: $surface-variant
+        font-variation-settings: 'wght' 300
+        transition: font-variation-settings 200ms cubic-bezier(0.2, 0, 0, 1)

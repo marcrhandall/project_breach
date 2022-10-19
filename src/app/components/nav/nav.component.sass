@@ -18,7 +18,14 @@
     padding-left: $px1
     padding-right: $px1
     padding-bottom: $px2
-    
+
+.drawer-icon
+    display: block
+   
+
+.drawer-icon-sm
+    display: none
+
 @media screen and (max-width: $md)
     .container 
         padding-bottom: 0
@@ -36,6 +43,7 @@
         display: flex
         margin-bottom: $px1
         min-height: $px6
+        margin-left: 4px
 
     .nav-item-group
         width: 300px
@@ -57,3 +65,9 @@
 
     .close 
         left: -300px
+
+    .drawer-icon
+        display: none
+
+    .drawer-icon-sm
+        display: block

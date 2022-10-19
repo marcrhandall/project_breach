@@ -5,7 +5,6 @@
 
 .nav-link
     border-radius: $corner-medium
-    flex-grow: 0
     padding: 0
     display: flex
     flex-direction: column
@@ -16,41 +15,52 @@
     margin-bottom: $px2
     text-decoration: none
     gap: 0
+    font-variation-settings: 'wght' 600
     .link-label
         font-size: .75rem
-    ion-icon
+        font-variation-settings: 'wght' 400
+        transition: font-variation-settings 200ms cubic-bezier(0.2, 0, 0, 1)
+    .material-symbols-rounded
+        display: flex
+        justify-content: center
+        align-items: center
         border-radius: $corner-full
-        padding-left: $px2
-        padding-right: $px2
         height: $px4
+        width: 56px
+        align-items: center
+        font-variation-settings: 'wght' 400
     &:hover
-        --ionicon-stroke-width: 40px 
+        --ionicon-stroke-width: 40px
         color: $on-secondary-container
-        ion-icon
-            background-color: $surface-variant
-            transition: 0.5s background-color
-    &:hover
         background-color: transparent
-
+        .link-label
+            font-variation-settings: 'wght' 500
+            transition: font-variation-settings 200ms cubic-bezier(0.2, 0, 0, 1)
+    &:active
+        .link-label
+            font-variation-settings: 'wght' 300
 
 .link-label
     height: 24px
     display: flex
-    align-items: center 
+    align-items: center
 
 .active
     color: $on-secondary-container
     background-color: transparent
-    transition: 0.5s background-color
-    ion-icon
+    .material-symbols-rounded
         color: $on-secondary-container
+        font-variation-settings: 'FILL' 100, 'wght' 400
         background-color: $secondary-container
-        transition: 0.5s background-color
     &:hover
-        --ionicon-stroke-width: 40px 
         color: $on-secondary-container
-        ion-icon
+        .material-symbols-rounded
             background-color: $secondary-container
+            font-variation-settings: 'FILL' 100, 'wght' 600
+    &:active
+        .material-symbols-rounded
+            background-color: $secondary-container
+            font-variation-settings: 'FILL' 100, 'wght' 300
 
 @media screen and (max-width: $md)
     .nav-link
@@ -61,32 +71,30 @@
         display: flex
         flex-direction: row
         flex-grow: 1
-        width: auto 
+        width: auto
         gap: $px2
         margin-bottom: 0
-        ion-icon
+        .material-symbols-rounded
+            width: auto
             border-radius: 0
             padding-left: 0
             padding-right: 0
         &:hover
             background-color: $surface-variant
-            transition: 0.5s background-color
-            ion-icon
+
+            .material-symbols-rounded
                 background-color: transparent
 
     .active
         color: $on-secondary-container
         background-color: $secondary-container
-        transition: 0.5s background-color
         &:hover
-            --ionicon-stroke-width: 40px 
+            --ionicon-stroke-width: 40px
             color: $on-secondary-container
             background-color: $secondary-container
-        ion-icon
+        .material-symbols-rounded
             color: $on-secondary-container
             background-color: transparent
-            transition: 0.5s background-color
-
 
     :host
         width: 100%

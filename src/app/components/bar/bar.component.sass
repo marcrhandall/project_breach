@@ -4,11 +4,14 @@
     display: flex
     height: $px8
     align-items: center
+    overflow: hidden
+    flex-wrap: nowrap
 
 .drawer-btn
     display: none
     margin-bottom: $px1
     margin-left: $px1
+    min-width: $px6
 
 .brand
     text-decoration: none
@@ -26,8 +29,10 @@
     background-color: $white
     height: $px5
     padding: 0 $px2 0
+    margin-left: $px1
 
 
 @media screen and (max-width: $md)
     .drawer-btn
         display: flex
+        width: $px6
